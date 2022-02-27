@@ -46,13 +46,9 @@ planets were clustered. I’m not sure if this made it more likely for the algor
 
 
 Extra notes:
-- I had to cut out a lot of features from the planets dataset to get a reasonable
-number of complete data points. I documented my reasoning for each cut in a
-text file in the planets directory.
-- I have a “bens_dataset ” directory and cleaning file set up with a stub method for
-the cleaning function. To use it, replace the CSV file in that directory with a real
-dataset, keeping the name Bens_Dataset.csv. Complete the getCleanedData()
-method in clean_Bens_Data.py. It should take in a file path and return a list of
-lists of floats, with the first entry in every sublist being some kind of identifier.
-Once this is done, you should be able to run clustering on Bens_Dataset from the
+- I had to cut out a lot of features from the planets dataset to get a reasonable number of complete data points. I documented my reasoning for each cut in a text 
+file in the planets directory.
+- I have a “bens_dataset ” directory and cleaning file set up with a stub method for the cleaning function. To use it, replace the CSV file in that directory with a real
+dataset, keeping the name Bens_Dataset.csv. Complete the getCleanedData() method in clean_Bens_Data.py. It should take in a file path and return a list of lists of floats,
+with the first entry in every sublist being some kind of identifier. Once this is done, you should be able to run clustering on Bens_Dataset from the
 command line just like the other datasets.
