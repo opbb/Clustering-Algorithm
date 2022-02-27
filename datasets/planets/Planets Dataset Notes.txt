@@ -1,0 +1,95 @@
+
+This file documents my process and thoughts behind how I cleaned the planets dataset.
+
+===============================
+== Manually culling columns: ==
+===============================
+
+This dataset is very incomplete, so I'm going to have to remove the columns for which there isn't a lot of data, and then I'll cull the datapoints which are still incomplete.
+
+Columns I'm removing:
+	-Errors, Limits and Blends (this about triples the amount of complete datapoints)
+		-pl_orbsmaxerr1
+		-pl_orbsmaxerr2
+		-pl_orbsmaxlim
+		-pl_orbeccenerr1
+		-pl_orbeccenerr2
+		-pl_orbeccenlim
+		-pl_orbinclerr1
+		-pl_orbinclerr2
+		-pl_orbincllim
+		-pl_denserr1
+		-pl_denserr2
+		-pl_denslim
+		-pl_radjerr1
+		-pl_radjerr2
+		-pl_radjlim
+		-pl_orbpererr1
+		-pl_orbpererr2
+		-pl_orbperlim
+		-st_optmagerr
+		-st_optmaglim
+		-st_optmagblend
+		-st_tefferr1
+		-st_tefferr2
+		-st_tefflim
+		-st_teffblend
+		-st_masserr1
+		-st_masserr2
+		-st_masslim
+		-st_massblend
+		-st_raderr1
+		-st_raderr2
+		-st_radlim
+		-st_radblend
+
+	- Columns which lack information for over 20% of the dataset:
+		-pl_orbsmax
+		-pl_orbeccen
+		-pl_orbincl
+		-pl_dens
+
+	-Human centric measurements:
+		-Data related to planet discovery:
+			-pl_kepflag
+			-pl_k2flag
+			-pl_discmethod
+		-Meta Data:
+			-pl_nnotes
+			-rowupdate
+		-Distance from the Sun:
+			-st_dist
+			-st_disterr1
+			-st_disterr2
+			-st_distlim
+		-Type flag for measurement:
+			-st_optband
+			-pl_bmassprov
+
+		-Names:
+			-pl_hostname
+
+	-Doubles of measurements in differnet formats:
+		-ra_str
+		-dec_str
+
+
+- I am including planet mass, even though only a third of the datapoints have it, simply because its such a basic feature and is very important for classifying planets.
+
+Columns remaining:
+	-pl_letter
+	-pl_pnum
+	-pl_orbper
+	-pl_bmassj
+	-pl_radj
+	-pl_ttvflag
+	-ra
+	-dec
+	-st_optmag
+	-st_teff
+	-st_mass
+	-st_rad
+
+Number of complete datapoints: 449
+
+I think that, while I've absolutely gutted the dataset, it's worth it to preserve these most important features and have even just a seventh of the datapoints be usable.
